@@ -1,0 +1,278 @@
+$color-green-dark: #18b681;
+$color-green-normal: #14eba2;
+$color-green-light: #43e4ae;
+$color-green-white: #bff5e3;
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #a3f3d8;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $color-green-normal;
+    border-radius: 10px;
+    transition: all .3s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: $color-green-dark;
+}
+@font-face {
+    font-family: viga;
+    src: url('/../fonts/Viga-Regular.ttf');
+}
+@font-face {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    src: url('/../fonts/Sora-Regular.ttf');
+}
+.rad {
+    border-radius: 15px !important;
+}
+.shadow-primary {
+    box-shadow: 0px .25rem .5rem rgba($color: #14eba2, $alpha: 0.15);
+}
+.rad-top {
+    border-top-right-radius: 15px !important;
+    border-top-left-radius: 15px !important;
+}
+.txt-sora {
+    font-family: sora !important;
+}
+.bg-img {
+    background-size: cover;
+    background-position: center;
+}
+.py-45 {
+    padding-top: 1.9rem !important;
+    padding-bottom: 1.9rem !important;
+}
+.viga {
+    font-family: viga !important;
+}
+.bg-green {
+    background-color: $color-green-normal;
+}
+.bg-green-light {
+    background-color: $color-green-light;
+}
+.bg-green-white {
+    background-color: $color-green-white;
+}
+.bg-green-dark {
+    background-color: $color-green-dark;
+}
+.popular-blog {
+    transition: all .3s;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-green-white;
+    }
+}
+.nav {
+    background: linear-gradient(to right, $color-green-normal, $color-green-dark);
+    position: fixed !important;
+    width: 100%;
+    z-index: 1000;
+    .navbar-brand {
+        font-family: viga !important;
+    }
+    .nav-item {
+        padding: 0rem .4rem;
+        position: relative;
+        a {
+            color: white;
+            opacity: 1 !important;
+            padding: .4rem;
+        }
+    }
+    .link {
+        a {
+            color: white !important;
+        }
+        &::after {
+            content: '';
+            position: absolute !important;
+            bottom: 5px !important;
+            width: 0% !important;
+            left: 10% !important;
+            transition: all .3s;
+            height: 2px !important;
+            background-color: white !important;
+        }
+        &:hover::after {
+            width: 80% !important;
+        }
+    }
+}
+.active-nav {
+    &::after {
+        content: '';
+        position: absolute !important;
+        bottom: 5px !important;
+        width: 80% !important;
+        left: 10% !important;
+        transition: all .3s;
+        height: 2px !important;
+        background-color: white !important;
+    }
+}
+.no-active {
+    &::after {
+        display: none !important;
+    }
+}
+.overlay-black {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    width: 100%;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+}
+.btn-green-white {
+    background-color: $color-green-white !important;
+    color: black !important;
+    transition: all .3s;
+    border-radius: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border: none !important;
+    &:hover {
+        background-color: $color-green-dark !important;
+        cursor: pointer;
+    }
+}
+.btn-green-light {
+    background-color: $color-green-light !important;
+    color: black !important;
+    transition: all .3s;
+    border-radius: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-family: viga !important;
+    border: none !important;
+    &:hover {
+        background-color: $color-green-dark !important;
+        cursor: pointer;
+    }
+}
+.btn-green-primary {
+    background-color: $color-green-normal !important;
+    color: black !important;
+    transition: all .3s;
+    border-radius: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-family: viga !important;
+    border: none !important;
+    &:hover {
+        background-color: $color-green-dark !important;
+        cursor: pointer;
+    }
+}
+.btn-green-dark {
+    background-color: $color-green-dark !important;
+    color: white !important;
+    transform: scale(1);
+    transition: all .3s;
+    border-radius: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-family: viga !important;
+    border: none !important;
+    &:hover {
+        box-shadow: 0px .25rem .5rem rgba($color: #000, $alpha: 0.15);
+        background-color: $color-green-dark !important;
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+.btn-white {
+    background-color: white !important;
+    color: black !important;
+    transition: all .3s;
+    border-radius: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-family: viga !important;
+    border: none !important;
+    &:hover {
+        background-color: $color-green-white !important;
+        cursor: pointer;
+    }
+}
+.btn-store-app {
+    height: 60px;
+    width: auto;
+}
+.mText-primary {
+    color: $color-green-normal;
+}
+.mText-light {
+    color: $color-green-light;
+}
+.mText-dark {
+    color: $color-green-dark;
+}
+.mText-gray {
+    color: gray;
+}
+.img-footer {
+    left: 11%;
+    right: 60%;
+    margin: auto;
+    bottom: -50px;
+}
+.link-footer {
+    color: #000000;
+    position: relative;
+    transition: all .3s;
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+}
+.toggle-search {
+    background-color: white;
+    transition: all .3s;
+    &:hover {
+        cursor: pointer;
+        background-color: gainsboro;
+    }
+}
+.border-green {
+    border: 1px solid $color-green-normal !important;
+}
+.overlay-white-right {
+    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,.2));
+}
+.overlay-white-top {
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,.5));
+    opacity: 1;
+}
+.line-footer-white {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.licensi-footer {
+    border-top-right-radius: 20px;
+}
+.overlay-green {
+    position: absolute;
+    background: linear-gradient(to right, $color-green-normal, rgba(20, 235, 162, .8), rgba(20, 235, 162, .4));
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 960px) {
+    .img-footer {
+        left: 11%;
+        right: 60%;
+        margin: auto;
+        bottom: -80px;
+    }
+}

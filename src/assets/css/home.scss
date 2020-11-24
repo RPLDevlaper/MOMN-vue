@@ -1,0 +1,323 @@
+$color-green-dark: #18b681;
+$color-green-normal: #14eba2;
+$color-green-light: #43e4ae;
+.jumbotron-home {
+    background-image: url('~@/assets/img/wallpaper/home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.pattern-introduction {
+    left: -230px;
+    width: 380px;
+    opacity: .3;
+    transform: rotate(45deg);
+    top: 80px;
+}
+.pattern-transaction {
+    width: 450px;
+    bottom: -300px;
+    right: -200px;  
+}
+.line-introduction {
+    position: absolute;
+    right: 0;
+    width: 7px;
+    top: 25%;
+    background-color: gainsboro;
+    height: 75%;
+    &::after {
+        content: '';
+        top: 0;
+        height: 25%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color: $color-green-normal;
+    }
+}
+.line-stories,
+.line-transaction {
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    bottom: 5px;
+    height: 7px;
+    background-color: $color-green-normal;
+}
+.line-safety {
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    bottom: 5px;
+    height: 7px;
+    background-color: #fff;
+}
+.icon-introduction {
+    position: absolute;
+    right: -20px;
+    top: 20px;
+}
+.preview-feature {
+    position: absolute;
+    left: 46%;
+    right: 50%;
+    top: 55%;
+    bottom: 45%;
+    text-align: center;
+    .animation {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: white;
+        position: absolute;
+        background-color: 10px;
+        animation-name: animateFeature;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        &:nth-child(2) {
+            animation-delay: 1.2s;
+        }
+        &:nth-child(3) {
+            animation-delay: 2.4s;
+        }
+        &:nth-child(4) {
+            animation-delay: 3.6s;
+        }
+    }
+}
+
+@keyframes animateFeature {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(5.5);
+        opacity: 0;
+    }
+}
+
+.list-feature {
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    position: relative;
+    transition: all .3s;
+    cursor: pointer;
+    width: 70%;
+    &:hover {
+        background-color: white;
+        color: $color-green-dark;
+        .point {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            position: absolute;
+            border: 2px solid white;
+            right: -25px;
+            top: 30%;
+            bottom: 50%;
+            background-color: $color-green-light;
+        }
+    }
+    .point {
+        width: 25px;
+        transition: all .3s;
+        height: 25px;
+        border-radius: 25px;
+        position: absolute;
+        border: 2px solid white;
+        right: -12.5px;
+        top: 40%;
+        bottom: 50%;
+        background-color: white;
+    }
+}
+.list-feature.feature-left {
+    .point {
+        right: auto;
+        left: -25px;
+    }
+}
+.list-feature.feature-center {
+    .point {
+        bottom: -25px !important;
+        top: auto !important;
+        right: 55%;
+        left: 45%;
+    }
+}
+.list-feature.active-list {
+    background-color: white !important;
+    color: $color-green-dark !important;
+    .point {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        position: absolute;
+        border: 2px solid white;
+        right: -25px;
+        top: 30%;
+        bottom: 50%;
+        background-color: $color-green-light;
+    }
+}
+.pattern-feature-top {
+    position: absolute;
+    width: 350px;
+    right: -100px;
+    top: -60px;
+    transform: rotate(-20deg);
+    opacity: .15;
+}
+.pattern-feature-bottom {
+    position: absolute;
+    width: 350px;
+    left: -100px;
+    bottom: -50px;
+    transform: rotate(20deg);
+    opacity: .15;
+}
+.slider {
+    width: 450px;
+}
+.slider-stories {
+    height: 450px !important;
+}
+.slick-slide {
+    padding: 10px 5px;
+    height: 420px !important;
+    transition: all .3s;
+    transform: scale(.6);
+}
+.card-stories {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    height: 400px !important;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: inline-block;
+}
+.slick-arrow {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 10px !important;
+    background-color: $color-green-light !important;
+}
+.slick-center {
+    padding: 10px;
+    transform: scale(1) !important;
+    .card-stories {
+        padding: 10px 5px;
+        transition: all .3s;
+    }
+}
+.slick-dots {
+    position: absolute;
+    bottom: 0px;
+}
+.slick-prev {
+    left: 0;
+    z-index: 100;
+}
+.slick-next {
+    right: 0;
+}
+.slick-dots li button {
+    display: none;
+}
+.slick-dots li {
+    width: 10px;
+    height: 10px;
+    margin: auto 10px;
+    border-radius: 10px;
+    background-color: rgb(213, 213, 213);
+}
+.slick-dots li.slick-active {
+    background-color: $color-green-normal !important;
+}
+.img-story {
+    top: 0;
+    left:-40%;
+    right: 29%;
+    text-align: center;
+    margin: 0 auto;
+}
+.bg-linear-bottom-top {
+    background: linear-gradient(to top, $color-green-normal, rgba(20, 235, 162, .75), rgba(20, 235, 162, .3));
+    z-index: 10;
+}
+.petik-story {
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+    font-size: 8rem !important;
+    z-index: -2;
+}
+.img-card {
+    background-color: $color-green-normal;
+    img {
+        transition: all .3s;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            opacity: .6;
+        }
+    }
+}
+.pattern-promotion-top {
+    width: 400px;
+    top: -180px;
+    opacity: .2;
+    right: -200px;
+    transform: rotate(45deg);
+}
+.pattern-promotion-bottom {
+    width: 400px;
+    bottom: -170px;
+    opacity: .2;
+    left: -120px;
+    transform: rotate(45deg);
+}
+.card {
+    transition: all .3s;
+    &:hover {
+        box-shadow: 0px .3rem .6rem rgb(0, 0, 0, .15) !important;
+    }
+}
+
+.slider-promotions {
+    .slick-slide {
+        transform: scale(1) !important;
+        padding: 0px 1rem;
+        height: 320px !important;
+    }
+    .slick-prev {
+        left: -20px;
+    }
+    .slick-next {
+        right: -20px;
+    }
+}
+.partner-card {
+    transition: all .3s;
+    background-color: white;
+    img {
+        display: inline-block;
+        transition: all .3s;
+        height: 28px;
+        max-width: 200px;
+        object-fit: cover;
+        position: relative;
+    }
+    &:hover {
+        background-color: #9dfcdc !important;
+        img {
+            transform: scale(1.1);
+        }
+    }
+}

@@ -1,0 +1,108 @@
+$color-green-dark: #18b681;
+$color-green-normal: #14eba2;
+$color-green-light: #43e4ae;
+.bg-img-partner {
+  background-image: url('~@/assets/img/wallpaper/partner.jpg') !important;
+}
+.test-slider {
+  .card-slider {
+      height: auto !important;
+      position: relative;
+      overflow: hidden;
+  }
+  .slick-slide {
+    margin-left: 15px;
+    height: 345px !important;
+    margin-right: 15px;
+    min-height: 345px;
+    max-height: 520px;
+    transform: scale(1) !important;
+  }
+  .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .slick-prev {
+    left: -20px;
+  }
+  .slick-next {
+    right: -20px;
+  }
+  .pattern-slider {
+    left: -75px;
+    top: 100px;
+    transform: rotate(45deg);
+    opacity: .3;
+  }
+  .pattern-slider-right {
+    right: 100px;
+    transform: rotate(45deg);
+    width: 250px;
+    bottom: -100px;
+    opacity: .3;
+  }
+  .img-md-test {
+    width: 100%;
+    background-color: $color-green-normal;
+    height: 200px;
+  }
+  .overlay-white {
+    background: linear-gradient(to right, rgba(#ffff, 1), rgba(#ffff, .5));
+    top: 0;
+    left: 0;
+  }
+  .img-png-test {
+    height: 300px;
+    bottom: 0;
+    z-index: 100;
+    right: 50px;
+  }
+  .rekan-card {
+    margin-top: 42px;
+  }
+}
+.card-bisnis-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  background-color: $color-green-normal;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+}
+.bg-img-bussiness {
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.overlay-white-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: linear-gradient(to right, rgba(#ffff, 1), rgba(#ffff, .6));
+  height: 160px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .test-slider {
+    .slick-slide {
+      min-height: 520px;
+      transform: scale(1) !important;
+    }
+    .overlay-white {
+      background: linear-gradient(to top, rgba(#ffff, 1), rgba(#ffff, .9), rgba(#ffff, .2));
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+    .img-png-test {
+      height: 250px;
+      bottom: 0;
+      z-index: 100;
+      right: 50px;
+    }
+  }
+}
