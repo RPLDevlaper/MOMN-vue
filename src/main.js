@@ -20,6 +20,7 @@ import SlidingPagination from 'vue-sliding-pagination'
 import VueSocialSharing from 'vue-social-sharing'
 import VueSocialAuth from 'vue-social-auth'
 import VueDragScroll from 'vue-dragscroll'
+import VueChatScroll from 'vue-chat-scroll'
 
 library.add(fas, fab)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -28,6 +29,7 @@ Vue.component('loading', Loading)
 Vue.component('sliding-pagination', SlidingPagination)
 Vue.component(VueQrCode.name, VueQrCode)
 Vue.use(BootstrapVue, $, Meta, VueDragScroll)
+Vue.use(VueChatScroll)
 Vue.use(VueSocialSharing, {
   networks: { fakeblock: 'https://fakeblock.com/share?url=@url&title=@title'}
 })

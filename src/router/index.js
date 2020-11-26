@@ -22,6 +22,7 @@ import Profile from '../views/Dashboard/Profile.vue'
 import Bisnis from '../views/Dashboard/Bisnis.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
 import ResetPassword from '../views/ResetPassword.vue'
+import Chat from '../views/Dashboard/Chat.vue'
 
 Vue.use(VueRouter)
 
@@ -163,6 +164,12 @@ const routes = [
     name: 'ResetPassword',
     component: ResetPassword,
     props: {type: 'General'}
+  },
+  {
+    path: '/dashboard/chat',
+    name: 'Chat',
+    component: Chat,
+    props: {type: 'Dashboard'}
   },
   {
     path: '/about',

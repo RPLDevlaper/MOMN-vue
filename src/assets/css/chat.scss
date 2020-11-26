@@ -1,0 +1,398 @@
+$color-green-dark: #18b681;
+$color-green-normal: #14eba2;
+$color-green-light: #43e4ae;
+$color-green-white: #bff5e3;
+.bg-full-page {
+  min-height: 100vh !important;
+  max-height: 100vh !important;
+  overflow-x: visible !important;
+  overflow-y: auto !important;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.avatar-profile.minimize {
+  transform: scale(.5) !important;
+}
+.avatar-profile {
+  width: 90px;
+  height: 90px;
+  transition: all .3s ease-in-out;
+  transform: scale(1);
+  border-radius: 90px;
+  display: inline-block;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.parent-profile-chat {
+  width: 50%;
+  height: 45px;
+}
+.avatar-profile-chat {
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  display: inline-block;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.isActiveChat {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: $color-green-normal;
+  position: absolute;
+  bottom: 0px;
+  left: 35px;
+}
+.name-chat {
+  position: absolute;
+  top: 12px;
+  left: 58px;
+  h6 {
+    font-size: .9rem;
+  }
+}
+.widget-chat {
+  position: absolute;
+  right: 12px;
+  top: 26px;
+  .new-messsage {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    transform: scale(.6);
+    display: inline-block;
+    border-radius: 30px;
+    background-color: rgb(242, 96, 96);
+    color: white;
+  }
+  .pinned-message {
+    display: inline-block;
+    transform: rotate(45deg) scale(.7);
+  }
+  .mute-message {
+    display: inline-block;
+    transform: scale(.8);
+  }
+}
+
+.menu-chat {
+  position: absolute;
+  right: -110px;
+  top: 0px;
+  height: 100%;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  visibility: hidden;
+  border-radius: 16px;
+  background: linear-gradient(to left bottom, white, transparent);    
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.card-chat {
+  &:hover {
+    cursor: pointer;
+    .menu-chat {
+      right: 0;
+      transition: all .3s ease-in-out;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.list-menu-chat {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  width: 100px;
+  box-shadow: 0px .2rem .6rem -.15rem rgba($color: #000000, $alpha: .2);
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  z-index: 1000;
+  .list-menu {
+    transition: all .3s ease-in-out;
+    background-color: white;
+    &:hover {
+      background-color: gainsboro;
+      cursor: pointer;
+    }
+  }
+  .list-menu.delete {
+    background-color: rgb(240, 179, 179) !important;
+    &:hover {
+      background-color: rgb(240, 121, 121) !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.avatar-group-chat {
+  position: absolute;
+  bottom: -22px;
+  right: -13px;
+  width: 120px;
+  .avatar-item {
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    border: 3px solid $color-green-white !important;
+    background-color: #14eba2;
+    border-radius: 34px;
+    display: inline-block;
+    position: relative;
+    .counting {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      line-height: 30px;
+      font-size: .8rem;
+      color: #000;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:nth-child(1) {
+      right: -14px;
+      z-index: 10;
+    }
+    &:nth-child(2) {
+      right: -7px;
+      z-index: 5;
+    }
+    &:nth-child(3) {
+      img {
+        opacity: .35;
+      }
+    }
+  }
+}
+.card-resource {
+  background-color: $color-green-white;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background-color: $color-green-normal;
+    cursor: pointer;
+  }
+}
+
+.icon-resource {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: white;
+  text-align: center;
+  line-height: 40px;
+}
+
+.message-content {
+  width: 94%;
+  left: 3%;
+  bottom: 2%;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  input {
+    border-radius: 10px;
+    width: 100%;
+  }
+}
+
+.btn-patungan {
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  line-height: 50px;
+  border: none;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: white;
+  transition: all .3s;
+  &:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+  }
+}
+
+.chat-content {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+}
+
+.other-chat {
+  width: 60%;
+}
+.me-chat {
+  width: 60%;
+  position: relative;
+  left: 40%;
+}
+
+.avatar-chat-content {
+  width: 30px;
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  border-radius: 30px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.menu-chatBox {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  padding: 10px;
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menu-list-chatBox {
+  width: 100px;
+  right: -5px;
+  position: absolute;
+  overflow: hidden;
+  top: 35px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 20;
+  .menu-list {
+    background-color: white;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background-color: gainsboro;
+      cursor: pointer;
+    }
+  }
+  .menu-list.delete {
+    background-color: rgb(240, 179, 179) !important;
+    &:hover {
+      background-color: rgb(240, 121, 121) !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.toggleLeftAside {
+  position: fixed;
+  left: 23%;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  right: auto;
+  top: 50%;
+  transition: all .3s ease-in-out;
+  bottom: 50%;
+  background-color: white;
+  box-shadow: 0px .2rem .6rem -.15rem rgba($color: #000000, $alpha: .4);
+  border-radius: 50px;
+  &:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+  }
+}
+
+.toggleRightAside {
+  position: fixed;
+  right: 23%;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  left: auto;
+  top: 50%;
+  box-shadow: 0px .2rem .6rem -.15rem rgba($color: #000000, $alpha: .4);
+  transition: all .3s ease-in-out;
+  bottom: 50%;
+  background-color: white;
+  border-radius: 50px;
+  &:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+  }
+}
+.asideLeft {
+  position: relative;
+}
+.asideLeftFalse {
+  left: 6.5% !important;
+  right: auto;
+}
+.asideRightFalse {
+  right: 6.5% !important;
+  left: auto;
+}
+
+@media screen and (max-width: 960px) {
+  .asideLeft {
+    position: fixed !important;
+    top: 0;
+    z-index: 1000;
+    height: 100%;
+    background-color: white;
+    left: 0;
+  }
+  .toggleLeftAside {
+    left: auto;
+    right: 23%;
+  }
+  .toggleRightAside {
+    left: 23%; //
+    right: auto;
+  }
+  .asideLeftHide {
+    left: -100%;
+  }
+  .asideLeftFalse {
+    right: auto;
+    left: 4% !important;
+    transform: scale(.6);
+  }
+  .asideRightFalse {
+    left: auto;
+    right: 4% !important;
+    transform: scale(.6);
+  }
+  
+  .asideRight {
+    position: fixed !important;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px .2rem .6rem -.15rem rgba($color: #000000, $alpha: .2);
+    height: 100%;
+    background-color: white;
+    right: 0;
+  }
+  .asideRightHide {
+    right: -100%;
+  }
+}

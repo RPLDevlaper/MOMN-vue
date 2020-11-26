@@ -128,7 +128,7 @@
 						</div>
 					</b-col>
 					<b-col md="12">
-						<div class="w-100 py-3 bg-green-white rad shadow-sm">
+						<!-- <div class="w-100 py-3 bg-green-white rad shadow-sm">
 							<b-row>
 								<b-col md="8" class="text-left px-5 pt-4">
 									<img src="@/assets/img/icon/startBussiness.png" height="72px" class="d-inline-block mr-3 position-relative" style="top: -18px" alt="startBusiness">
@@ -141,7 +141,7 @@
 									<b-button class="btn btn-green-primary py-3 px-5 w-100 my-4">Mulai <img src="@/assets/img/icon/next.png" width="10px" alt="next"></b-button>
 								</b-col>
 							</b-row>
-						</div>
+						</div> -->
 					</b-col>
 				</b-row>
 			</b-container>

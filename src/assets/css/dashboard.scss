@@ -462,3 +462,79 @@ $color-green-white: #bff5e3;
     background-color: gainsboro;
   }
 }
+.menu-group-card {
+  right: -20px;
+  top: 41px;
+  overflow: hidden;
+  width: 100px;
+  box-shadow: 0px .25rem .5rem -.1rem rgba($color: #000000, $alpha: .15);
+  border-radius: 10px;
+  background-color: white;
+}
+.menu-item-group-card {
+  padding: 10px;
+  transition: all .3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+  &:nth-child(1) {
+    background-color: white;
+  }
+  &:nth-child(1):hover {
+    background-color: gainsboro;
+  }
+}
+.menu-item-group-card.delete {
+  background-color: rgb(250, 157, 157);
+  position: relative;
+  z-index: 10;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(221, 83, 83) !important;
+  }
+}
+.avatar-group {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 120px;
+  .avatar-item {
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    border: 3px solid white;
+    background-color: #14eba2;
+    border-radius: 34px;
+    display: inline-block;
+    position: relative;
+    .counting {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      line-height: 30px;
+      font-size: .8rem;
+      color: #000;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:nth-child(1) {
+      right: -14px;
+      z-index: 10;
+    }
+    &:nth-child(2) {
+      right: -7px;
+      z-index: 5;
+    }
+    &:nth-child(3) {
+      img {
+        opacity: .35;
+      }
+    }
+  }
+}

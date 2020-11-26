@@ -56,7 +56,7 @@ $color-green-white: #bff5e3;
     background-color: $color-green-light;
 }
 .bg-green-white {
-    background-color: $color-green-white;
+    background-color: $color-green-white !important;
 }
 .bg-green-dark {
     background-color: $color-green-dark;

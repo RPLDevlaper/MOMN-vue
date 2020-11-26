@@ -19,7 +19,7 @@
               <b-row>
                 <b-col md="8">
                   <b-button class="btn btn-green-primary px-5 py-3 btn-sm" v-b-modal.modal-manage-group>Buat Group</b-button>
-                  <b-button class="btn btn-white border-green px-5 py-3 btn-sm ml-2">Buka MOMN Chat</b-button>
+                  <b-button class="btn btn-white border-green px-5 py-3 btn-sm ml-2" :to="{name: 'Chat'}">Buka MOMN Chat</b-button>
                 </b-col>
                 <b-col md="4" class="mt-md-0 mt-3">
                   <div class="text-right">
@@ -34,12 +34,25 @@
                   <b-col md="6">
                     <div class="w-100 mb-3 rad card">
                       <div class="header-card-group position-relative" :style="`background-image: url('${web}images/blog/1604854908.jpeg')`">
-                        <div class="ellipsis-menu-group position-absolute px-3 py-2"><font-awesome-icon icon="ellipsis-v"></font-awesome-icon></div>
-                        <div class="menu-group-card">
-                          <div class=""></div>
+                        <div class="ellipsis-menu-group position-absolute m-2 px-3 py-2" @click="showMenuGroup(1)"><font-awesome-icon icon="ellipsis-v"></font-awesome-icon></div>
+                        <div class="menu-group-card position-absolute" v-if="menuGroupActive == 1">
+                          <div class="menu-item-group-card" @click="onUpdateGroup(1)">Update</div>
+                          <div class="menu-item-group-card delete" @click="onDeleteGroup(1)">Delete</div>
                         </div>
                       </div>
                       <div class="position-relative px-3 pb-3 pt-4 text-center">
+                        <div class="avatar-group">
+                          <div class="avatar-item">
+                            <img :src="`${web}images/avatar/Mohammad_Khusnul_Khuluq_1604238099.png`" alt="">
+                          </div>
+                          <div class="avatar-item">
+                            <img :src="`${web}images/avatar/ilham-sm.jpg`" alt="">
+                          </div>
+                          <div class="avatar-item">
+                            <div class="counting viga">+2</div>
+                            <img :src="`${web}images/avatar/rehan-sm.jpg`" alt="">
+                          </div>
+                        </div>
                         <div class="logo-parent-card position-absolute">
                           <div class="icon-group-card">
                             <img :src="`${web}images/group/teamwork.png`" class="w-100 h-100" style="object-fit: cover" alt="Team">
@@ -51,9 +64,26 @@
                     </div>
                   </b-col>
                   <b-col md="6">
-                    <div class="w-100 mb-3 rad card overflow-hidden">
+                    <div class="w-100 mb-3 rad card">
                       <div class="header-card-group" :style="`background-image: url('${web}images/blog/1604855029.jpeg')`"></div>
+                      <div class="ellipsis-menu-group position-absolute m-2 px-3 py-2" @click="showMenuGroup(2)"><font-awesome-icon icon="ellipsis-v"></font-awesome-icon></div>
+                      <div class="menu-group-card position-absolute" v-if="menuGroupActive == 2">
+                        <div class="menu-item-group-card" @click="onUpdateGroup(2)">Update</div>
+                        <div class="menu-item-group-card delete" @click="onDeleteGroup(2)">Delete</div>
+                      </div>
                       <div class="position-relative px-3 pb-3 pt-4 text-center">
+                        <div class="avatar-group">
+                          <div class="avatar-item">
+                            <img :src="`${web}images/avatar/Mohammad_Khusnul_Khuluq_1604238099.png`" alt="">
+                          </div>
+                          <div class="avatar-item">
+                            <img :src="`${web}images/avatar/ilham-sm.jpg`" alt="">
+                          </div>
+                          <div class="avatar-item">
+                            <div class="counting viga">+2</div>
+                            <img :src="`${web}images/avatar/rehan-sm.jpg`" alt="">
+                          </div>
+                        </div>
                         <div class="logo-parent-card position-absolute">
                           <div class="icon-group-card">
                             <img :src="`${web}images/group/intaxa.png`" class="w-100 h-100" style="object-fit: cover" alt="Team">
@@ -137,7 +167,7 @@
     <b-modal ref="modal-manage-group" id="modal-manage-group" class="modal-standart p-4" centered hide-footer hide-header>
       <div class="closable-any-modal" @click="closeModalManage('modal-manage-group')"><font-awesome-icon icon="times"></font-awesome-icon></div>
       <div class="p-3">
-        <h4 class="viga">Buat Group Baru</h4>
+        <h4 class="viga">{{ modalManageCondition }} Group</h4>
         <div class="w-100">
           <b-row>
             <b-col cols="3">
@@ -295,6 +325,7 @@ export default {
     return {
       activeAside: false,
       activeNotif: false,
+      modalManageCondition: 'Buat',
       menuGroupActive: 0,
       groupForm: {
         file: null,
@@ -321,6 +352,21 @@ export default {
     MenuNotification
   },
   methods: {
+    onUpdateGroup(id) {
+      this.modalManageCondition = 'Edit'
+      // get group by id
+      this.$refs['modal-manage-group'].show()
+    },
+    onDeleteGroup(id) {
+      confirm('Yakin mau dihapus ?')
+    },
+    showMenuGroup(id) {
+      if(this.menuGroupActive == id) {
+        this.menuGroupActive = 0
+      } else {
+        this.menuGroupActive = id
+      }
+    },
     toggleMenuGroup(id) {
       if(this.menuGroupActive == 0) {
         this.menuGroupActive = id
@@ -329,6 +375,9 @@ export default {
       }
     },
     closeModalManage(ref) {
+      if(ref == 'modal-manage-group') {
+        this.modalManageCondition = 'Buat'
+      }
       this.$refs[ref].hide()
     },
     clickFile() {
